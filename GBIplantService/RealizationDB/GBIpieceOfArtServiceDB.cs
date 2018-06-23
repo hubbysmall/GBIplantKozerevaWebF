@@ -40,35 +40,6 @@ namespace GBIplantService.realizationDB
             return result;
 
 
-/*
-            List<GBIpieceofArt__ingridientViewModel> productComponents = new List<GBIpieceofArt__ingridientViewModel>();
-            for (int j = 0; j < source.GBIpieceofArt__ingridients.Count; ++j)
-            {
-                if (source.GBIpieceofArt__ingridients[j].GBIpieceOfArtId == id)
-                {
-                    string componentName = string.Empty;
-                    for (int k = 0; k < source.GBIindgridients.Count; ++k)
-                    {
-                        if (source.GBIpieceofArt__ingridients[j].GBIindgridientId == source.GBIindgridients[k].Id)
-                        {
-                            componentName = source.GBIindgridients[k].GBIindgridientName;
-                            break;
-                        }
-                    }
-                    productComponents.Add(new GBIpieceofArt__ingridientViewModel
-                    {
-                        Id = source.GBIpieceofArt__ingridients[j].Id,
-                        GBIpieceofArtId = source.GBIpieceofArt__ingridients[j].GBIpieceOfArtId,
-                        GBIingridientId = source.GBIpieceofArt__ingridients[j].GBIindgridientId,
-                        GBIingridientName = componentName,
-                        Count = source.GBIpieceofArt__ingridients[j].Count
-                    });
-                }
-            }
-            return productComponents;*/
-        }
-    
-
         public List<GBIpieceOfArtViewModel> GetList()
         {
             List<GBIpieceOfArtViewModel> result = context.GBIpieceOfArts
