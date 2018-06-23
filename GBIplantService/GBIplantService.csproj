@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5FA4D1EC-B4CA-44DE-AF92-403E73C184E9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GBIplantService</RootNamespace>
+    <AssemblyName>GBIplantService</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ALLDataListSingleton.cs" />
+    <Compile Include="Binding Models\BuyerBindingModel.cs" />
+    <Compile Include="Binding Models\ExecutorBindingModel.cs" />
+    <Compile Include="Binding Models\GBIingridientBindingModel.cs" />
+    <Compile Include="Binding Models\GBIpieceOfArtBindingModel.cs" />
+    <Compile Include="Binding Models\GBIpieceofArt__ingridientBindingModel.cs" />
+    <Compile Include="Binding Models\StorageBindingModel.cs" />
+    <Compile Include="Binding Models\Storage__GBIingridientBindingModel.cs" />
+    <Compile Include="Binding Models\ZakazBindingModel.cs" />
+    <Compile Include="InterfaceRealization\BuyerServiceList.cs" />
+    <Compile Include="InterfaceRealization\ExecutorServiceList.cs" />
+    <Compile Include="InterfaceRealization\GBIingridientsServiceList.cs" />
+    <Compile Include="InterfaceRealization\GBIpieceOfArtServiceList.cs" />
+    <Compile Include="InterfaceRealization\MainServiceList.cs" />
+    <Compile Include="InterfaceRealization\StorageServiceList.cs" />
+    <Compile Include="Interfaces\IBuyerService.cs" />
+    <Compile Include="Interfaces\IExecutorService.cs" />
+    <Compile Include="Interfaces\IGBIingridientService.cs" />
+    <Compile Include="Interfaces\IGBIpieceOfArtService.cs" />
+    <Compile Include="Interfaces\IMainService.cs" />
+    <Compile Include="Interfaces\IStorageService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View Models\BuyerViewModel.cs" />
+    <Compile Include="View Models\ExecutorViewModel.cs" />
+    <Compile Include="View Models\GBIingridientViewModel.cs" />
+    <Compile Include="View Models\GBIpieceOfArtViewModel.cs" />
+    <Compile Include="View Models\GBIpieceofArt__ingridientViewModel.cs" />
+    <Compile Include="View Models\StorageViewModel.cs" />
+    <Compile Include="View Models\Storage__GBIingridientViewModel.cs" />
+    <Compile Include="View Models\ZakazViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GBIplantModel\GBIplantModel.csproj">
+      <Project>{5ef195eb-6628-4f69-8b00-9648177550f3}</Project>
+      <Name>GBIplantModel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
