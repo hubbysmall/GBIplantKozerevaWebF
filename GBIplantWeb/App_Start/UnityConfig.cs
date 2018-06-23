@@ -1,6 +1,8 @@
+using GBIplantService;
 using GBIplantService.Interfaces;
-using GBIplantService.realizationOfInterfaces;
+using GBIplantService.realizationDB;
 using System;
+using System.Data.Entity;
 using Unity;
 
 namespace GBIplantWeb
@@ -43,12 +45,13 @@ namespace GBIplantWeb
 
             // TODO: Register your type's mappings here.
             // container.RegisterType<IProductRepository, ProductRepository>();
-            container.RegisterType<IMainService, MainServiceList>();
-            container.RegisterType<IBuyerService, BuyerServiceList>();
-            container.RegisterType<IExecutorService, ExecutorServiceList>();
-            container.RegisterType<IGBIingridientService, GBIingridientsServiceList>();
-            container.RegisterType<IGBIpieceOfArtService, GBIpieceOfArtServiceList>();
-            container.RegisterType<IStorageService, StorageServiceList>();
+            container.RegisterType<DbContext, GBIwebDBcontext>();
+            container.RegisterType<IMainService, MainServiceDB>();
+            container.RegisterType<IBuyerService, BuyerServiceDB>();
+            container.RegisterType<IExecutorService, ExecutorServiceDB>();
+            container.RegisterType<IGBIingridientService, GBIingridientsServiceDB>();
+            container.RegisterType<IGBIpieceOfArtService, GBIpieceOfArtServiceDB>();
+            container.RegisterType<IStorageService, StorageServiceBD>();
         }
     }
 }

@@ -15,5 +15,9 @@ namespace GBIplantModel
         public int GBIindgridientId { get; set; }
 
         public int Count { get; set; }
+
+        public virtual GBIpieceOfArt GBIpieceOfArt { get; set; }
+
+        public virtual GBIindgridient GBIindgridient { get; set; }
     }
 }

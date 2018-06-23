@@ -21,7 +21,7 @@
             </Columns>
         </asp:GridView>
         <asp:Button ID="Home" runat="server" OnClick="Home_Click" Text="Home" />
-        <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" SelectMethod="GetList" TypeName="GBIplantService.realizationOfInterfaces.ExecutorServiceList"></asp:ObjectDataSource>
+        <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" SelectMethod="GetList" TypeName="GBIplantService.realizationDB.ExecutorServiceDB"></asp:ObjectDataSource>
     </form>
 </body>
 </html>

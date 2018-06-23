@@ -38,7 +38,7 @@
                     <asp:BoundField DataField="Count" HeaderText="Count" SortExpression="Count" />
                 </Columns>
             </asp:GridView>
-            <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" SelectMethod="GetListOfComps" TypeName="GBIplantService.realizationOfInterfaces.GBIpieceOfArtServiceList">
+            <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" SelectMethod="GetListOfComps" TypeName="GBIplantService.realizationDB.GBIpieceOfArtServiceDB">
                 <SelectParameters>
                     <asp:SessionParameter Name="id" SessionField="id" Type="Int32" />
                 </SelectParameters>

@@ -30,7 +30,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -49,19 +56,25 @@
     <Compile Include="Binding Models\StorageBindingModel.cs" />
     <Compile Include="Binding Models\Storage__GBIingridientBindingModel.cs" />
     <Compile Include="Binding Models\ZakazBindingModel.cs" />
-    <Compile Include="InterfaceRealization\BuyerServiceList.cs" />
-    <Compile Include="InterfaceRealization\ExecutorServiceList.cs" />
-    <Compile Include="InterfaceRealization\GBIingridientsServiceList.cs" />
-    <Compile Include="InterfaceRealization\GBIpieceOfArtServiceList.cs" />
-    <Compile Include="InterfaceRealization\MainServiceList.cs" />
-    <Compile Include="InterfaceRealization\StorageServiceList.cs" />
+    <Compile Include="GBIwebDBcontext.cs" />
     <Compile Include="Interfaces\IBuyerService.cs" />
     <Compile Include="Interfaces\IExecutorService.cs" />
     <Compile Include="Interfaces\IGBIingridientService.cs" />
     <Compile Include="Interfaces\IGBIpieceOfArtService.cs" />
     <Compile Include="Interfaces\IMainService.cs" />
     <Compile Include="Interfaces\IStorageService.cs" />
+    <Compile Include="Migrations\201806202315066_FirstOne.cs" />
+    <Compile Include="Migrations\201806202315066_FirstOne.Designer.cs">
+      <DependentUpon>201806202315066_FirstOne.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RealizationDB\BuyerServiceDB.cs" />
+    <Compile Include="RealizationDB\ExecutorServiceDB.cs" />
+    <Compile Include="RealizationDB\GBIingridientsServiceDB.cs" />
+    <Compile Include="RealizationDB\GBIpieceOfArtServiceDB.cs" />
+    <Compile Include="RealizationDB\MainServiceDB.cs" />
+    <Compile Include="RealizationDB\StorageServiceBD.cs" />
     <Compile Include="View Models\BuyerViewModel.cs" />
     <Compile Include="View Models\ExecutorViewModel.cs" />
     <Compile Include="View Models\GBIingridientViewModel.cs" />
@@ -76,6 +89,15 @@
       <Project>{5ef195eb-6628-4f69-8b00-9648177550f3}</Project>
       <Name>GBIplantModel</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201806202315066_FirstOne.resx">
+      <DependentUpon>201806202315066_FirstOne.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

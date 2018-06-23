@@ -43,7 +43,7 @@
                 <asp:BoundField DataField="DateExecute" HeaderText="DateExecute" SortExpression="DateExecute" />
             </Columns>
         </asp:GridView>
-        <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" SelectMethod="GetList" TypeName="GBIplantService.realizationOfInterfaces.MainServiceList"></asp:ObjectDataSource>
+        <asp:ObjectDataSource ID="ObjectDataSource1" runat="server" SelectMethod="GetList" TypeName="GBIplantService.realizationDB.MainServiceDB"></asp:ObjectDataSource>
     </form>
 </body>
 </html>

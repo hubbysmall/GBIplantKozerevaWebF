@@ -25,5 +25,11 @@ namespace GBIplantModel
         public DateTime DateCreate { get; set; }
 
         public DateTime? DateExecute { get; set; }
+
+        public virtual Buyer Buyer { get; set; }
+
+        public virtual GBIpieceOfArt GBIpieceOfArt { get; set; }
+
+        public virtual Executor Executor { get; set; }
     }
 }
